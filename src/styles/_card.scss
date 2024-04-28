@@ -1,0 +1,231 @@
+@use 'variables' as v;
+@use 'transitions';
+
+.card{
+    max-width: 400px;
+    width: 100%;
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px -1px rgba(68, 68, 68, 0.1);
+    border: 1px solid var(--border);
+    position: relative;
+    background-color: var(--primary);
+    transition: all 0.5s ease;
+
+    .btn{
+        border: 1px solid var(--border);
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        transition: background 0.3s ease, border 0.5s ease;
+        height: 38px;
+        cursor: pointer;
+
+        &:hover{
+            background-color: var(--bg-btn);
+            border: 1px solid lighten($color: v.$bg-btn-color, $amount: 20%);
+            svg{
+                transition: all 0.5s ease;
+                fill: #fff;
+            }
+        }
+    }
+    .hover-n{
+        &:hover{
+            background-color: transparent;
+            border: 1px solid var(--border);
+            svg{
+                fill: var(--tertiary);
+            }
+        }
+    }
+    .btn__icon{
+        padding: 2px;
+        width: 30px;
+        height: 30px;
+        justify-content: center;
+    }
+    .btn__success{
+        background-color: #4CAF50;
+        color: #fff;
+        border: 1px solid #64ce67;
+        transition: all 0.2s ease;
+
+        &:hover{
+            background-color: #439c47;
+            border: 1px solid #64ce67;
+        }
+    }
+
+    &__title{
+        font-size: 22px;
+        font-weight: 500;
+        max-width: 80%;
+        margin-bottom: 32px;
+    }
+
+    &__mode__container{
+        position: absolute;
+        top: 24px;
+        right: 24px;
+
+        .sun{
+            width: 14px;
+            height: 14px;
+        }
+
+        .moon{
+            width: 11px;
+            height: 11px;
+        }
+    }
+
+    .card__form{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        .span-2{
+            grid-column: span 2;
+        }
+
+        .card__form__person__info, .card__form__address__info{
+            display: grid;
+            row-gap: 16px;
+            column-gap: 12px;
+        }
+
+        .card__form__person__info{
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .card__form__address__info{
+            grid-template-columns: 1fr 1fr;
+
+            .cep__container{
+                display: grid;
+                gap: 12px;
+                grid-template-columns: 1fr auto;
+
+                button.search{
+                    height: 37px;
+                    width: 100%;
+                    aspect-ratio: 1/1;
+
+                    svg{
+                        width: 12px;
+                        height: 12px;
+                    }
+                    svg.spinInfinite{
+                        width: 14px;
+                        height: 14px;
+                    }
+                }
+            }
+        }
+
+        .input__container{
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+
+            .form__input{
+                width: 100%;
+                padding-inline: 12px;
+                height: 36px;
+                outline: none;
+                border: 1px solid var(--border);
+                border-radius: 4px;
+                background-color: var(--primary);
+                font-size: 14px;
+                transition: all 0.5s ease;
+            }
+
+            .form__label{
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                top: 9px;
+                left: 16px;
+                transition: all 0.1s ease;
+                z-index: 1;
+                color: var(--quaternary);
+                cursor: text;
+                font-size: 14px;
+                user-select: none;
+
+                &::before{
+                    content: '';
+                    position: absolute;
+                    width: calc(100% + 14px);
+                    height: 2px;
+                    background-color: var(--primary);
+                    z-index: -1;
+                    transition: all 0.5s ease;
+                }
+            }
+
+            .form__input:focus + .form__label, .form__input:not(:placeholder-shown) + .form__label{
+                transform: translateY(-15px);
+                font-size: 10px;
+                left: 12px;
+                cursor: auto;
+            }
+
+            .form__input ~ span.error{
+                display: none;
+            }
+
+            .form__input.error{
+                border: 1px solid var(--danger);
+                background-color: rgba(244, 67, 54, 0.1);
+            }
+
+            .form__input.error + .form__label, .form__input.error:not(:placeholder-shown) + .form__label{
+                color: var(--danger);
+
+                &::before{
+                    background-color: rgba(244, 67, 54, 0.02);
+                    transition: none;
+                }
+            }
+
+            .form__input.error:focus + .form__label, .form__input.error:not(:placeholder-shown) + .form__label{
+                &::before{
+                    background-color: var(--primary);
+                }
+            }
+
+            .form__input.error ~ span.error{
+                display: block;
+                color: var(--danger);
+                font-size: 12px;
+                margin-top: 4px;
+
+                .split__btn{
+                    background: none;
+                    border: none;
+                    color: var(--danger);
+                    font-size: 12px;
+                    cursor: pointer;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        .card__form__subtitle{
+            transition: all 0.5s ease;
+        }
+
+        .form__submit{
+            justify-content: center;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+    }
+}

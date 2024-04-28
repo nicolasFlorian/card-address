@@ -1,0 +1,23 @@
+@use 'variables' as v;
+
+.notification{
+    position: absolute;
+    background-color: var(--danger);
+    padding: 10px 16px;
+    border-radius: 6px;
+    bottom: 15%;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    span{
+        color: #fff;
+        font-size: 14px;
+    }
+
+    svg{
+        width: 14px;
+        height: 14px;
+        fill: #fff;
+    }
+}

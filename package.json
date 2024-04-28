@@ -1,0 +1,22 @@
+{
+  "name": "code",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel serve src/index.html src/styles/main.scss src/scripts/main.js --port 1234",
+    "dev": "npm run start & browser-sync start --proxy localhost:1234 --files 'dist/**/**' & gulp"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.12.0",
+    "browser-sync": "^3.0.2",
+    "gulp": "^5.0.0",
+    "gulp-cheerio": "^1.0.0",
+    "gulp-svg-sprite": "^2.0.3",
+    "parcel": "^2.12.0"
+  }
+}

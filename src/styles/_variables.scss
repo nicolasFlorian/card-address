@@ -1,0 +1,47 @@
+//COLORS
+
+// Light Theme
+$primary-color: #fff;
+$secondary-color: #3b3b3d;
+$tertiary-color: #848D97;
+$quaternary-color: #b7b8bf;
+
+$danger-color: #f44336;
+
+$bg-color: #fff;
+$bg-btn-color: #2c7ffb;
+
+$border-color: #e4e4e4;
+
+// Dark Theme
+$primary-color-dark: #282E34;
+$secondary-color-dark: #fff;
+
+$bg-color-dark: #0b1016;
+
+$border-color-dark: #444d56;
+
+// Variables
+
+:root {
+    --primary: #{$primary-color};
+    --secondary: #{$secondary-color};
+    --tertiary: #{$tertiary-color};
+    --quaternary: #{$quaternary-color};
+
+    --danger: #{$danger-color};
+
+    --bg: #{$bg-color};
+    --bg-btn: #{$bg-btn-color};
+
+    --border: #{$border-color};
+}
+
+body.dark-mode {
+    --primary: #{$primary-color-dark};
+    --secondary: #{$secondary-color-dark};
+
+    --bg: #{$bg-color-dark};
+
+    --border: #{$border-color-dark};
+}

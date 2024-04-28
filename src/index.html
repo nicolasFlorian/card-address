@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+    <html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="styles/main.scss">
+        <script src="scripts/main.js" defer></script>
+    </head>
+
+    <body class="tran-5">
+        <div class="card">
+            <div class="header">
+                <h1 class="card__title tran-5">Realize seu cadastro</h1>
+                <button class="card__mode__container btn btn__icon hover-n" data-mode="light">
+                    <svg class="moon item">
+                        <use xlink:href="./sprite/symbol/sprite.svg#moon"></use>
+                    </svg>
+                </button>
+            </div>
+
+            
+            <form class="card__form">
+                <div class="card__form__person__info">
+                    <span class="card__form__subtitle span-2">Dados Pessoais</span>
+                    <div class="input__container">
+                        <input type="text" id="name" name="name" class="form__input" placeholder=" ">
+                        <label for="name" class="form__label">Nome</label>
+                    </div>
+                    <div class="input__container">
+                        <input type="text" id="last-name" name="name" class="form__input" placeholder=" ">
+                        <label for="last-name" class="form__label">Sobrenome</label>
+                    </div>
+                    <div class="input__container span-2">
+                        <input type="email" id="email" name="email" class="form__input" placeholder=" ">
+                        <label for="email" class="form__label">Email</label>
+                    </div>
+                </div>
+
+                <div class="card__form__address__info">
+                    <span class="card__form__subtitle span-2">Endereço</span>
+                    <div class="cep__container span-2">
+                        <div class="input__container">
+                            <input type="text" id="cep" name="cep" class="form__input" placeholder=" ">
+                            <label for="cep" class="form__label">CEP</label>
+                        </div>
+                        <button class="btn btn__icon search">
+                            <svg>
+                                <use xlink:href="./sprite/symbol/sprite.svg#search"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="input__container span-2">
+                        <input type="text" id="address" name="address" class="form__input" placeholder=" ">
+                        <label for="address" class="form__label">Endereço</label>
+                    </div>
+                    <div class="input__container">
+                        <input type="text" id="complement" name="complement" class="form__input" placeholder=" ">
+                        <label for="complement" class="form__label">Complemento</label>
+                    </div>
+                    <div class="input__container">
+                        <input type="text" id="number" name="number" class="form__input" placeholder=" ">
+                        <label for="number" class="form__label">Número</label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn__success form__submit">Cadastrar</button>
+            </form>
+        </div>
+    </body>
+</html>
