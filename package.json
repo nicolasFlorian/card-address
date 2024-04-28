@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "parcel serve src/index.html src/styles/main.scss src/scripts/main.js --port 1234",
-    "dev": "npm run start & browser-sync start --proxy localhost:1234 --files 'dist/**/**' & gulp"
+    "dev": "npm run start & browser-sync start --proxy localhost:1234 --files 'dist/**/**' & gulp",
+    "build": "gulp & parcel build src/index.html src/styles/main.scss src/scripts/main.js"
   },
   "keywords": [],
   "author": "",
