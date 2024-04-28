@@ -10,7 +10,7 @@ modeBtn.addEventListener('click', () => {
         modeIcon.classList.add('spinLeft');
         modeBtn.disabled = true;
         setTimeout(() => {
-            modeIconUse.setAttribute('xlink:href', '/sprite.42afc416.svg#sun');
+            modeIconUse.setAttribute('xlink:href', '/sprite.f3a44401.svg#sun');
             modeIcon.classList.contains('moon') ? modeIcon.classList.replace('moon', 'sun') : modeIcon.classList.replace('sun', 'moon');
         }, 300);
         modeIcon.addEventListener('animationend', () => {
@@ -21,7 +21,7 @@ modeBtn.addEventListener('click', () => {
         modeIcon.classList.add('spinRight');
         modeBtn.disabled = true;
         setTimeout(() => {
-            modeIconUse.setAttribute('xlink:href', '/sprite.42afc416.svg#moon');
+            modeIconUse.setAttribute('xlink:href', '/sprite.f3a44401.svg#moon');
             modeIcon.classList.contains('moon') ? modeIcon.classList.replace('moon', 'sun') : modeIcon.classList.replace('sun', 'moon');
         }, 300);
         modeIcon.addEventListener('animationend', () => {
@@ -307,12 +307,12 @@ function showNot(){
 
 function loadBtn(){
     const svgSearch = btnSearchCep.querySelector('use');
-    svgSearch.setAttribute('xlink:href', '/sprite.42afc416.svg#load')
+    svgSearch.setAttribute('xlink:href', '/sprite.f3a44401.svg#load')
     svgSearch.parentElement.classList.add('spinInfinite');
     setTimeout(() => {
         cepRequest();
         svgSearch.parentElement.classList.remove('spinInfinite');
-        svgSearch.setAttribute('xlink:href', '/sprite.42afc416.svg#search')
+        svgSearch.setAttribute('xlink:href', '/sprite.f3a44401.svg#search')
     }, 1500)
 }
 
